@@ -1,0 +1,96 @@
+{
+    "type": "object",
+    "properties": {
+        "Action": {
+            "required": true,
+            "type": "string"
+        },
+        "Version": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "afterCommitId": {
+                    "description": "To establish the directionality of the comparison, the full commit ID of the 'after' commit.",
+                    "type": "string"
+                },
+                "beforeCommitId": {
+                    "description": "To establish the directionality of the comparison, the full commit ID of the 'before' commit.",
+                    "type": "string"
+                },
+                "clientRequestToken": {
+                    "description": "A unique, client-generated idempotency token that when provided in a request, ensures the request cannot be repeated with a changed parameter. If a request is received with the same parameters and a token is included, the request will return information about the initial request that used that token.",
+                    "type": "string"
+                },
+                "content": {
+                    "description": "The content of the comment you want to make.",
+                    "type": "string"
+                },
+                "location": {
+                    "description": "The location of the comparison where you want to comment.",
+                    "properties": {
+                        "filePath": {
+                            "description": "The name of the file being compared, including its extension and subdirectory, if any.",
+                            "type": "string"
+                        },
+                        "filePosition": {
+                            "description": "The position of a change within a compared file, in line number format.",
+                            "type": "integer"
+                        },
+                        "relativeFileVersion": {
+                            "description": "In a comparison of commits or a pull request, whether the change is in the 'before' or 'after' of that comparison.",
+                            "enum": [
+                                "BEFORE",
+                                "AFTER"
+                            ],
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "repositoryName": {
+                    "description": "The name of the repository where you want to post a comment on the comparison between commits.",
+                    "maxLength": 100,
+                    "minLength": 1,
+                    "pattern": "[\\w\\.-]+",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "repositoryName",
+                "afterCommitId",
+                "content"
+            ],
+            "type": "object"
+        },
+        "X_Amz_Content_Sha256": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Date": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Algorithm": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Credential": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Security_Token": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Signature": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_SignedHeaders": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

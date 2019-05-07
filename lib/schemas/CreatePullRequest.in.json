@@ -1,0 +1,93 @@
+{
+    "type": "object",
+    "properties": {
+        "Action": {
+            "required": true,
+            "type": "string"
+        },
+        "Version": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "clientRequestToken": {
+                    "description": "<p>A unique, client-generated idempotency token that when provided in a request, ensures the request cannot be repeated with a changed parameter. If a request is received with the same parameters and a token is included, the request will return information about the initial request that used that token.</p> <note> <p>The AWS SDKs prepopulate client request tokens. If using an AWS SDK, you do not have to generate an idempotency token, as this will be done for you.</p> </note>",
+                    "type": "string"
+                },
+                "description": {
+                    "description": "A description of the pull request.",
+                    "maxLength": 10240,
+                    "type": "string"
+                },
+                "targets": {
+                    "description": "The targets for the pull request, including the source of the code to be reviewed (the source branch), and the destination where the creator of the pull request intends the code to be merged after the pull request is closed (the destination branch).",
+                    "items": {
+                        "description": "Returns information about a target for a pull request.",
+                        "properties": {
+                            "destinationReference": {
+                                "description": "The branch of the repository where the pull request changes will be merged into. Also known as the destination branch.",
+                                "type": "string"
+                            },
+                            "repositoryName": {
+                                "description": "The name of the repository that contains the pull request.",
+                                "maxLength": 100,
+                                "minLength": 1,
+                                "pattern": "[\\w\\.-]+",
+                                "type": "string"
+                            },
+                            "sourceReference": {
+                                "description": "The branch of the repository that contains the changes for the pull request. Also known as the source branch.",
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "repositoryName",
+                            "sourceReference"
+                        ],
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "title": {
+                    "description": "The title of the pull request. This title will be used to identify the pull request to other users in the repository.",
+                    "maxLength": 150,
+                    "type": "string"
+                }
+            },
+            "required": [
+                "title",
+                "targets"
+            ],
+            "type": "object"
+        },
+        "X_Amz_Content_Sha256": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Date": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Algorithm": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Credential": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Security_Token": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Signature": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_SignedHeaders": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

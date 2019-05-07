@@ -1,0 +1,102 @@
+{
+    "type": "object",
+    "properties": {
+        "Action": {
+            "required": true,
+            "type": "string"
+        },
+        "Version": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "afterCommitId": {
+                    "description": "The full commit ID of the commit in the source branch that is the current tip of the branch for the pull request when you post the comment.",
+                    "type": "string"
+                },
+                "beforeCommitId": {
+                    "description": "The full commit ID of the commit in the destination branch that was the tip of the branch at the time the pull request was created.",
+                    "type": "string"
+                },
+                "clientRequestToken": {
+                    "description": "A unique, client-generated idempotency token that when provided in a request, ensures the request cannot be repeated with a changed parameter. If a request is received with the same parameters and a token is included, the request will return information about the initial request that used that token.",
+                    "type": "string"
+                },
+                "content": {
+                    "description": "The content of your comment on the change.",
+                    "type": "string"
+                },
+                "location": {
+                    "description": "The location of the change where you want to post your comment. If no location is provided, the comment will be posted as a general comment on the pull request difference between the before commit ID and the after commit ID.",
+                    "properties": {
+                        "filePath": {
+                            "description": "The name of the file being compared, including its extension and subdirectory, if any.",
+                            "type": "string"
+                        },
+                        "filePosition": {
+                            "description": "The position of a change within a compared file, in line number format.",
+                            "type": "integer"
+                        },
+                        "relativeFileVersion": {
+                            "description": "In a comparison of commits or a pull request, whether the change is in the 'before' or 'after' of that comparison.",
+                            "enum": [
+                                "BEFORE",
+                                "AFTER"
+                            ],
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "pullRequestId": {
+                    "description": "The system-generated ID of the pull request. To get this ID, use <a>ListPullRequests</a>.",
+                    "type": "string"
+                },
+                "repositoryName": {
+                    "description": "The name of the repository where you want to post a comment on a pull request.",
+                    "maxLength": 100,
+                    "minLength": 1,
+                    "pattern": "[\\w\\.-]+",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "pullRequestId",
+                "repositoryName",
+                "beforeCommitId",
+                "afterCommitId",
+                "content"
+            ],
+            "type": "object"
+        },
+        "X_Amz_Content_Sha256": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Date": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Algorithm": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Credential": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Security_Token": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Signature": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_SignedHeaders": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

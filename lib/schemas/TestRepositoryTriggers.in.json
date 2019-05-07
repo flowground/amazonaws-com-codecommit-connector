@@ -1,0 +1,107 @@
+{
+    "type": "object",
+    "properties": {
+        "Action": {
+            "required": true,
+            "type": "string"
+        },
+        "Version": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "description": "Represents the input of a test repository triggers operation.",
+            "properties": {
+                "repositoryName": {
+                    "description": "The name of the repository in which to test the triggers.",
+                    "maxLength": 100,
+                    "minLength": 1,
+                    "pattern": "[\\w\\.-]+",
+                    "type": "string"
+                },
+                "triggers": {
+                    "description": "The list of triggers to test.",
+                    "items": {
+                        "description": "Information about a trigger for a repository.",
+                        "properties": {
+                            "branches": {
+                                "description": "<p>The branches that will be included in the trigger configuration. If you specify an empty array, the trigger will apply to all branches.</p> <note> <p>While no content is required in the array, you must include the array itself.</p> </note>",
+                                "items": {
+                                    "maxLength": 256,
+                                    "minLength": 1,
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            },
+                            "customData": {
+                                "description": "Any custom data associated with the trigger that will be included in the information sent to the target of the trigger.",
+                                "type": "string"
+                            },
+                            "destinationArn": {
+                                "description": "The ARN of the resource that is the target for a trigger. For example, the ARN of a topic in Amazon Simple Notification Service (SNS).",
+                                "type": "string"
+                            },
+                            "events": {
+                                "description": "<p>The repository events that will cause the trigger to run actions in another service, such as sending a notification through Amazon Simple Notification Service (SNS). </p> <note> <p>The valid value \"all\" cannot be used with any other values.</p> </note>",
+                                "items": {
+                                    "enum": [
+                                        "all",
+                                        "updateReference",
+                                        "createReference",
+                                        "deleteReference"
+                                    ],
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            },
+                            "name": {
+                                "description": "The name of the trigger.",
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "destinationArn",
+                            "events"
+                        ],
+                        "type": "object"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "repositoryName",
+                "triggers"
+            ],
+            "type": "object"
+        },
+        "X_Amz_Content_Sha256": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Date": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Algorithm": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Credential": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Security_Token": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Signature": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_SignedHeaders": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

@@ -1,0 +1,175 @@
+{
+    "type": "object",
+    "properties": {
+        "Action": {
+            "required": true,
+            "type": "string"
+        },
+        "Version": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "authorName": {
+                    "description": "The name of the author who created the commit. This information will be used as both the author and committer for the commit.",
+                    "type": "string"
+                },
+                "branchName": {
+                    "description": "The name of the branch where you will create the commit.",
+                    "maxLength": 256,
+                    "minLength": 1,
+                    "type": "string"
+                },
+                "commitMessage": {
+                    "description": "The commit message you want to include as part of creating the commit. Commit messages are limited to 256 KB. If no message is specified, a default message will be used.",
+                    "type": "string"
+                },
+                "deleteFiles": {
+                    "description": "The files to delete in this commit. These files will still exist in prior commits.",
+                    "items": {
+                        "description": "A file that will be deleted as part of a commit.",
+                        "properties": {
+                            "filePath": {
+                                "description": "The full path of the file that will be deleted, including the name of the file.",
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "filePath"
+                        ],
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "email": {
+                    "description": "The email address of the person who created the commit.",
+                    "type": "string"
+                },
+                "keepEmptyFolders": {
+                    "description": "If the commit contains deletions, whether to keep a folder or folder structure if the changes leave the folders empty. If this is specified as true, a .gitkeep file will be created for empty folders.",
+                    "type": "boolean"
+                },
+                "parentCommitId": {
+                    "description": "The ID of the commit that is the parent of the commit you will create. If this is an empty repository, this is not required.",
+                    "type": "string"
+                },
+                "putFiles": {
+                    "description": "The files to add or update in this commit.",
+                    "items": {
+                        "description": "Information about a file that will be added or updated as part of a commit.",
+                        "properties": {
+                            "fileContent": {
+                                "description": "The content of the file, if a source file is not specified.",
+                                "maxLength": 6291456,
+                                "type": "string"
+                            },
+                            "fileMode": {
+                                "description": "The extrapolated file mode permissions for the file. Valid values include EXECUTABLE and NORMAL.",
+                                "enum": [
+                                    "EXECUTABLE",
+                                    "NORMAL",
+                                    "SYMLINK"
+                                ],
+                                "type": "string"
+                            },
+                            "filePath": {
+                                "description": "The full path to the file in the repository, including the name of the file.",
+                                "type": "string"
+                            },
+                            "sourceFile": {
+                                "description": "The name and full path of the file that contains the changes you want to make as part of the commit, if you are not providing the file content directly.",
+                                "properties": {
+                                    "filePath": {
+                                        "description": "The full path to the file, including the name of the file.",
+                                        "type": "string"
+                                    },
+                                    "isMove": {
+                                        "description": "Whether to remove the source file from the parent commit.",
+                                        "type": "boolean"
+                                    }
+                                },
+                                "required": [
+                                    "filePath"
+                                ],
+                                "type": "object"
+                            }
+                        },
+                        "required": [
+                            "filePath"
+                        ],
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "repositoryName": {
+                    "description": "The name of the repository where you will create the commit.",
+                    "maxLength": 100,
+                    "minLength": 1,
+                    "pattern": "[\\w\\.-]+",
+                    "type": "string"
+                },
+                "setFileModes": {
+                    "description": "The file modes to update for files in this commit.",
+                    "items": {
+                        "description": "Information about the file mode changes.",
+                        "properties": {
+                            "fileMode": {
+                                "description": "The file mode for the file.",
+                                "enum": [
+                                    "EXECUTABLE",
+                                    "NORMAL",
+                                    "SYMLINK"
+                                ],
+                                "type": "string"
+                            },
+                            "filePath": {
+                                "description": "The full path to the file, including the name of the file.",
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "filePath",
+                            "fileMode"
+                        ],
+                        "type": "object"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "repositoryName",
+                "branchName"
+            ],
+            "type": "object"
+        },
+        "X_Amz_Content_Sha256": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Date": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Algorithm": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Credential": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Security_Token": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Signature": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_SignedHeaders": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

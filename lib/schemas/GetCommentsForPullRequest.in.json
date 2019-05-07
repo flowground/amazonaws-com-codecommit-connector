@@ -1,0 +1,76 @@
+{
+    "type": "object",
+    "properties": {
+        "maxResults": {
+            "required": false,
+            "type": "string"
+        },
+        "nextToken": {
+            "required": false,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "afterCommitId": {
+                    "description": "The full commit ID of the commit in the source branch that was the tip of the branch at the time the comment was made.",
+                    "type": "string"
+                },
+                "beforeCommitId": {
+                    "description": "The full commit ID of the commit in the destination branch that was the tip of the branch at the time the pull request was created.",
+                    "type": "string"
+                },
+                "maxResults": {
+                    "description": "A non-negative integer used to limit the number of returned results. The default is 100 comments. You can return up to 500 comments with a single request.",
+                    "type": "integer"
+                },
+                "nextToken": {
+                    "description": "An enumeration token that when provided in a request, returns the next batch of the results.",
+                    "type": "string"
+                },
+                "pullRequestId": {
+                    "description": "The system-generated ID of the pull request. To get this ID, use <a>ListPullRequests</a>.",
+                    "type": "string"
+                },
+                "repositoryName": {
+                    "description": "The name of the repository that contains the pull request.",
+                    "maxLength": 100,
+                    "minLength": 1,
+                    "pattern": "[\\w\\.-]+",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "pullRequestId"
+            ],
+            "type": "object"
+        },
+        "X_Amz_Content_Sha256": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Date": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Algorithm": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Credential": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Security_Token": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Signature": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_SignedHeaders": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

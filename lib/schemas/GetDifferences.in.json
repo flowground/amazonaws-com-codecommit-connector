@@ -1,0 +1,81 @@
+{
+    "type": "object",
+    "properties": {
+        "MaxResults": {
+            "required": false,
+            "type": "string"
+        },
+        "NextToken": {
+            "required": false,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "MaxResults": {
+                    "description": "A non-negative integer used to limit the number of returned results.",
+                    "type": "integer"
+                },
+                "NextToken": {
+                    "description": "An enumeration token that when provided in a request, returns the next batch of the results.",
+                    "type": "string"
+                },
+                "afterCommitSpecifier": {
+                    "description": "The branch, tag, HEAD, or other fully qualified reference used to identify a commit.",
+                    "type": "string"
+                },
+                "afterPath": {
+                    "description": "The file path in which to check differences. Limits the results to this path. Can also be used to specify the changed name of a directory or folder, if it has changed. If not specified, differences will be shown for all paths.",
+                    "type": "string"
+                },
+                "beforeCommitSpecifier": {
+                    "description": "The branch, tag, HEAD, or other fully qualified reference used to identify a commit. For example, the full commit ID. Optional. If not specified, all changes prior to the <code>afterCommitSpecifier</code> value will be shown. If you do not use <code>beforeCommitSpecifier</code> in your request, consider limiting the results with <code>maxResults</code>.",
+                    "type": "string"
+                },
+                "beforePath": {
+                    "description": "The file path in which to check for differences. Limits the results to this path. Can also be used to specify the previous name of a directory or folder. If <code>beforePath</code> and <code>afterPath</code> are not specified, differences will be shown for all paths.",
+                    "type": "string"
+                },
+                "repositoryName": {
+                    "description": "The name of the repository where you want to get differences.",
+                    "maxLength": 100,
+                    "minLength": 1,
+                    "pattern": "[\\w\\.-]+",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "repositoryName",
+                "afterCommitSpecifier"
+            ],
+            "type": "object"
+        },
+        "X_Amz_Content_Sha256": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Date": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Algorithm": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Credential": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Security_Token": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Signature": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_SignedHeaders": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

@@ -1,0 +1,74 @@
+{
+    "type": "object",
+    "properties": {
+        "Action": {
+            "required": true,
+            "type": "string"
+        },
+        "Version": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "destinationCommitSpecifier": {
+                    "description": "The branch, tag, HEAD, or other fully qualified reference used to identify a commit. For example, a branch name or a full commit ID.",
+                    "type": "string"
+                },
+                "mergeOption": {
+                    "description": "The merge option or strategy you want to use to merge the code. The only valid value is FAST_FORWARD_MERGE.",
+                    "enum": [
+                        "FAST_FORWARD_MERGE"
+                    ],
+                    "type": "string"
+                },
+                "repositoryName": {
+                    "description": "The name of the repository where the pull request was created.",
+                    "maxLength": 100,
+                    "minLength": 1,
+                    "pattern": "[\\w\\.-]+",
+                    "type": "string"
+                },
+                "sourceCommitSpecifier": {
+                    "description": "The branch, tag, HEAD, or other fully qualified reference used to identify a commit. For example, a branch name or a full commit ID.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "repositoryName",
+                "destinationCommitSpecifier",
+                "sourceCommitSpecifier",
+                "mergeOption"
+            ],
+            "type": "object"
+        },
+        "X_Amz_Content_Sha256": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Date": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Algorithm": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Credential": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Security_Token": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Signature": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_SignedHeaders": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

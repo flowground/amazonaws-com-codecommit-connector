@@ -1,0 +1,99 @@
+{
+    "type": "object",
+    "properties": {
+        "Action": {
+            "required": true,
+            "type": "string"
+        },
+        "Version": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "branchName": {
+                    "description": "The name of the branch where you want to add or update the file. If this is an empty repository, this branch will be created.",
+                    "maxLength": 256,
+                    "minLength": 1,
+                    "type": "string"
+                },
+                "commitMessage": {
+                    "description": "A message about why this file was added or updated. While optional, adding a message is strongly encouraged in order to provide a more useful commit history for your repository.",
+                    "type": "string"
+                },
+                "email": {
+                    "description": "An email address for the person adding or updating the file.",
+                    "type": "string"
+                },
+                "fileContent": {
+                    "description": "The content of the file, in binary object format. ",
+                    "maxLength": 6291456,
+                    "type": "string"
+                },
+                "fileMode": {
+                    "description": "The file mode permissions of the blob. Valid file mode permissions are listed below.",
+                    "enum": [
+                        "EXECUTABLE",
+                        "NORMAL",
+                        "SYMLINK"
+                    ],
+                    "type": "string"
+                },
+                "filePath": {
+                    "description": "<p>The name of the file you want to add or update, including the relative path to the file in the repository.</p> <note> <p>If the path does not currently exist in the repository, the path will be created as part of adding the file.</p> </note>",
+                    "type": "string"
+                },
+                "name": {
+                    "description": "The name of the person adding or updating the file. While optional, adding a name is strongly encouraged in order to provide a more useful commit history for your repository.",
+                    "type": "string"
+                },
+                "parentCommitId": {
+                    "description": "<p>The full commit ID of the head commit in the branch where you want to add or update the file. If this is an empty repository, no commit ID is required. If this is not an empty repository, a commit ID is required. </p> <p>The commit ID must match the ID of the head commit at the time of the operation, or an error will occur, and the file will not be added or updated.</p>",
+                    "type": "string"
+                },
+                "repositoryName": {
+                    "description": "The name of the repository where you want to add or update the file.",
+                    "maxLength": 100,
+                    "minLength": 1,
+                    "pattern": "[\\w\\.-]+",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "repositoryName",
+                "branchName",
+                "fileContent",
+                "filePath"
+            ],
+            "type": "object"
+        },
+        "X_Amz_Content_Sha256": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Date": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Algorithm": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Credential": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Security_Token": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Signature": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_SignedHeaders": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}
