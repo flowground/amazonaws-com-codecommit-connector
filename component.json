@@ -1,6 +1,6 @@
 {
     "title": "AWS CodeCommit",
-    "description": "<fullname>AWS CodeCommit</fullname> <p>This is the <i>AWS CodeCommit API Reference</i>. This reference provides descriptions of the operations and data types for AWS CodeCommit API along with usage examples.</p> <p>You can use the AWS CodeCommit API to work with the following objects:</p> <p>Repositories, by calling the following:</p> <ul> <li> <p> <a>BatchGetRepositories</a>, which returns information about one or more repositories associated with your AWS account.</p> </li> <li> <p> <a>CreateRepository</a>, which creates an AWS CodeCommit repository.</p> </li> <li> <p> <a>DeleteRepository</a>, which deletes an AWS CodeCommit repository.</p> </li> <li> <p> <a>GetRepository</a>, which returns information about a specified repository.</p> </li> <li> <p> <a>ListRepositories</a>, which lists all AWS CodeCommit repositories associated with your AWS account.</p> </li> <li> <p> <a>UpdateRepositoryDescription</a>, which sets or updates the description of the repository.</p> </li> <li> <p> <a>UpdateRepositoryName</a>, which changes the name of the repository. If you change the name of a repository, no other users of that repository will be able to access it until you send them the new HTTPS or SSH URL to use.</p> </li> </ul> <p>Branches, by calling the following:</p> <ul> <li> <p> <a>CreateBranch</a>, which creates a new branch in a specified repository.</p> </li> <li> <p> <a>DeleteBranch</a>, which deletes the specified branch in a repository unless it is the default branch.</p> </li> <li> <p> <a>GetBranch</a>, which returns information about a specified branch.</p> </li> <li> <p> <a>ListBranches</a>, which lists all branches for a specified repository.</p> </li> <li> <p> <a>UpdateDefaultBranch</a>, which changes the default branch for a repository.</p> </li> </ul> <p>Files, by calling the following:</p> <ul> <li> <p> <a>DeleteFile</a>, which deletes the content of a specified file from a specified branch.</p> </li> <li> <p> <a>GetFile</a>, which returns the base-64 encoded content of a specified file.</p> </li> <li> <p> <a>GetFolder</a>, which returns the contents of a specified folder or directory.</p> </li> <li> <p> <a>PutFile</a>, which adds or modifies a file in a specified repository and branch.</p> </li> </ul> <p>Information about committed code in a repository, by calling the following:</p> <ul> <li> <p> <a>CreateCommit</a>, which creates a commit for changes to a repository.</p> </li> <li> <p> <a>GetBlob</a>, which returns the base-64 encoded content of an individual Git blob object within a repository.</p> </li> <li> <p> <a>GetCommit</a>, which returns information about a commit, including commit messages and author and committer information.</p> </li> <li> <p> <a>GetDifferences</a>, which returns information about the differences in a valid commit specifier (such as a branch, tag, HEAD, commit ID or other fully qualified reference).</p> </li> </ul> <p>Pull requests, by calling the following:</p> <ul> <li> <p> <a>CreatePullRequest</a>, which creates a pull request in a specified repository.</p> </li> <li> <p> <a>DescribePullRequestEvents</a>, which returns information about one or more pull request events.</p> </li> <li> <p> <a>GetCommentsForPullRequest</a>, which returns information about comments on a specified pull request.</p> </li> <li> <p> <a>GetMergeConflicts</a>, which returns information about merge conflicts between the source and destination branch in a pull request.</p> </li> <li> <p> <a>GetPullRequest</a>, which returns information about a specified pull request.</p> </li> <li> <p> <a>ListPullRequests</a>, which lists all pull requests for a repository.</p> </li> <li> <p> <a>MergePullRequestByFastForward</a>, which merges the source destination branch of a pull request into the specified destination branch for that pull request using the fast-forward merge option.</p> </li> <li> <p> <a>PostCommentForPullRequest</a>, which posts a comment to a pull request at the specified line, file, or request.</p> </li> <li> <p> <a>UpdatePullRequestDescription</a>, which updates the description of a pull request.</p> </li> <li> <p> <a>UpdatePullRequestStatus</a>, which updates the status of a pull request.</p> </li> <li> <p> <a>UpdatePullRequestTitle</a>, which updates the title of a pull request.</p> </li> </ul> <p>Information about comments in a repository, by calling the following:</p> <ul> <li> <p> <a>DeleteCommentContent</a>, which deletes the content of a comment on a commit in a repository.</p> </li> <li> <p> <a>GetComment</a>, which returns information about a comment on a commit.</p> </li> <li> <p> <a>GetCommentsForComparedCommit</a>, which returns information about comments on the comparison between two commit specifiers in a repository.</p> </li> <li> <p> <a>PostCommentForComparedCommit</a>, which creates a comment on the comparison between two commit specifiers in a repository.</p> </li> <li> <p> <a>PostCommentReply</a>, which creates a reply to a comment.</p> </li> <li> <p> <a>UpdateComment</a>, which updates the content of a comment on a commit in a repository.</p> </li> </ul> <p>Triggers, by calling the following:</p> <ul> <li> <p> <a>GetRepositoryTriggers</a>, which returns information about triggers configured for a repository.</p> </li> <li> <p> <a>PutRepositoryTriggers</a>, which replaces all triggers for a repository and can be used to create or delete triggers.</p> </li> <li> <p> <a>TestRepositoryTriggers</a>, which tests the functionality of a repository trigger by sending data to the trigger target.</p> </li> </ul> <p>For information about how to use AWS CodeCommit, see the <a href=\"http://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html\">AWS CodeCommit User Guide</a>.</p>",
+    "description": "AWS CodeCommit This is the AWS CodeCommit API Reference. This reference provides descriptions\nof the operations and data types for AWS CodeCommit API along with usage\nexamples.\n\nYou can use the AWS CodeCommit API to work with the following objects:\n\nRepositories, by calling the following:\n\n *   BatchGetRepositories, which returns information about one or more\n   repositories associated with your AWS account.\n   \n   \n *   CreateRepository, which creates an AWS CodeCommit repository.\n   \n   \n *   DeleteRepository, which deletes an AWS CodeCommit repository.\n   \n   \n *   GetRepository, which returns information about a specified repository.\n   \n   \n *   ListRepositories, which lists all AWS CodeCommit repositories associated\n   with your AWS account.\n   \n   \n *   UpdateRepositoryDescription, which sets or updates the description of the\n   repository.\n   \n   \n *   UpdateRepositoryName, which changes the name of the repository. If you\n   change the name of a repository, no other users of that repository will be\n   able to access it until you send them the new HTTPS or SSH URL to use.\n   \n   \n\nBranches, by calling the following:\n\n *   CreateBranch, which creates a new branch in a specified repository.\n   \n   \n *   DeleteBranch, which deletes the specified branch in a repository unless it\n   is the default branch.\n   \n   \n *   GetBranch, which returns information about a specified branch.\n   \n   \n *   ListBranches, which lists all branches for a specified repository.\n   \n   \n *   UpdateDefaultBranch, which changes the default branch for a repository.\n   \n   \n\nFiles, by calling the following:\n\n *   DeleteFile, which deletes the content of a specified file from a specified\n   branch.\n   \n   \n *   GetFile, which returns the base-64 encoded content of a specified file.\n   \n   \n *   GetFolder, which returns the contents of a specified folder or directory.\n   \n   \n *   PutFile, which adds or modifies a file in a specified repository and branch.\n   \n   \n\nInformation about committed code in a repository, by calling the following:\n\n *   CreateCommit, which creates a commit for changes to a repository.\n   \n   \n *   GetBlob, which returns the base-64 encoded content of an individual Git blob\n   object within a repository.\n   \n   \n *   GetCommit, which returns information about a commit, including commit\n   messages and author and committer information.\n   \n   \n *   GetDifferences, which returns information about the differences in a valid\n   commit specifier (such as a branch, tag, HEAD, commit ID or other fully\n   qualified reference).\n   \n   \n\nPull requests, by calling the following:\n\n *   CreatePullRequest, which creates a pull request in a specified repository.\n   \n   \n *   DescribePullRequestEvents, which returns information about one or more pull\n   request events.\n   \n   \n *   GetCommentsForPullRequest, which returns information about comments on a\n   specified pull request.\n   \n   \n *   GetMergeConflicts, which returns information about merge conflicts between\n   the source and destination branch in a pull request.\n   \n   \n *   GetPullRequest, which returns information about a specified pull request.\n   \n   \n *   ListPullRequests, which lists all pull requests for a repository.\n   \n   \n *   MergePullRequestByFastForward, which merges the source destination branch of\n   a pull request into the specified destination branch for that pull request\n   using the fast-forward merge option.\n   \n   \n *   PostCommentForPullRequest, which posts a comment to a pull request at the\n   specified line, file, or request.\n   \n   \n *   UpdatePullRequestDescription, which updates the description of a pull\n   request.\n   \n   \n *   UpdatePullRequestStatus, which updates the status of a pull request.\n   \n   \n *   UpdatePullRequestTitle, which updates the title of a pull request.\n   \n   \n\nInformation about comments in a repository, by calling the following:\n\n *   DeleteCommentContent, which deletes the content of a comment on a commit in\n   a repository.\n   \n   \n *   GetComment, which returns information about a comment on a commit.\n   \n   \n *   GetCommentsForComparedCommit, which returns information about comments on\n   the comparison between two commit specifiers in a repository.\n   \n   \n *   PostCommentForComparedCommit, which creates a comment on the comparison\n   between two commit specifiers in a repository.\n   \n   \n *   PostCommentReply, which creates a reply to a comment.\n   \n   \n *   UpdateComment, which updates the content of a comment on a commit in a\n   repository.\n   \n   \n\nTriggers, by calling the following:\n\n *   GetRepositoryTriggers, which returns information about triggers configured\n   for a repository.\n   \n   \n *   PutRepositoryTriggers, which replaces all triggers for a repository and can\n   be used to create or delete triggers.\n   \n   \n *   TestRepositoryTriggers, which tests the functionality of a repository\n   trigger by sending data to the trigger target.\n   \n   \n\nFor information about how to use AWS CodeCommit, see the AWS CodeCommit User\nGuide [http://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html].",
     "docsUrl": "https://aws.amazon.com/codecommit/",
     "url": "https://api.apis.guru/v2/specs/amazonaws.com/codecommit/2015-04-13/swagger.json",
     "envVars": {},
@@ -20,7 +20,7 @@
                 "label": "Custom Server URL",
                 "viewClass": "TextFieldView"
             },
-            "hmac": {
+            "auth_hmac": {
                 "label": "Authorization (hmac)",
                 "viewClass": "TextFieldView",
                 "note": "Amazon Signature authorization v4"
@@ -38,8 +38,8 @@
     "actions": {
         "BatchGetRepositories": {
             "main": "./lib/actions/BatchGetRepositories.js",
-            "title": "<p>Returns information about one or more repositories.</p> <note> <p>The description field for a repository accepts all HTML characters and all valid Unicode characters. Applications that do not HTML-encode the description and display it in a web page could expose users to potentially malicious code. Make sure that you HTML-encode the description field in any application that uses this API to display the repository description on a web page.</p> </note>",
-            "description": "<p>Returns information about one or more repositories.</p> <note> <p>The description field for a repository accepts all HTML characters and all valid Unicode characters. Applications that do not HTML-encode the description and display it in a web page could expose users to potentially malicious code. Make sure that you HTML-encode the description field in any application that uses this API to display the repository description on a web page.</p> </note>",
+            "title": "BatchGetRepositories",
+            "description": "Returns information about one or more repositories.\n\nThe description field for a repository accepts all HTML characters and all valid\nUnicode characters. Applications that do not HTML-encode the description and\ndisplay it in a web page could expose users to potentially malicious code. Make\nsure that you HTML-encode the description field in any application that uses\nthis API to display the repository description on a web page.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -55,8 +55,8 @@
         },
         "CreateBranch": {
             "main": "./lib/actions/CreateBranch.js",
-            "title": "<p>Creates a new branch in a repository and points the branch to a commit.</p> <note> <p>Calling the create branch operation does not set a repository's default branch. To do this, call the update default branch operation.</p> </note>",
-            "description": "<p>Creates a new branch in a repository and points the branch to a commit.</p> <note> <p>Calling the create branch operation does not set a repository's default branch. To do this, call the update default branch operation.</p> </note>",
+            "title": "CreateBranch",
+            "description": "Creates a new branch in a repository and points the branch to a commit.\n\nCalling the create branch operation does not set a repository's default branch.\nTo do this, call the update default branch operation.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -72,7 +72,7 @@
         },
         "CreateCommit": {
             "main": "./lib/actions/CreateCommit.js",
-            "title": "Creates a commit for a repository on the tip of a specified branch.",
+            "title": "CreateCommit",
             "description": "Creates a commit for a repository on the tip of a specified branch.",
             "fields": {
                 "verbose": {
@@ -89,7 +89,7 @@
         },
         "CreatePullRequest": {
             "main": "./lib/actions/CreatePullRequest.js",
-            "title": "Creates a pull request in the specified repository.",
+            "title": "CreatePullRequest",
             "description": "Creates a pull request in the specified repository.",
             "fields": {
                 "verbose": {
@@ -106,7 +106,7 @@
         },
         "CreateRepository": {
             "main": "./lib/actions/CreateRepository.js",
-            "title": "Creates a new, empty repository.",
+            "title": "CreateRepository",
             "description": "Creates a new, empty repository.",
             "fields": {
                 "verbose": {
@@ -123,7 +123,7 @@
         },
         "DeleteBranch": {
             "main": "./lib/actions/DeleteBranch.js",
-            "title": "Deletes a branch from a repository, unless that branch is the default branch for the repository. ",
+            "title": "DeleteBranch",
             "description": "Deletes a branch from a repository, unless that branch is the default branch for the repository. ",
             "fields": {
                 "verbose": {
@@ -140,7 +140,7 @@
         },
         "DeleteCommentContent": {
             "main": "./lib/actions/DeleteCommentContent.js",
-            "title": "Deletes the content of a comment made on a change, file, or commit in a repository.",
+            "title": "DeleteCommentContent",
             "description": "Deletes the content of a comment made on a change, file, or commit in a repository.",
             "fields": {
                 "verbose": {
@@ -157,7 +157,7 @@
         },
         "DeleteFile": {
             "main": "./lib/actions/DeleteFile.js",
-            "title": "Deletes a specified file from a specified branch. A commit is created on the branch that contains the revision. The file will still exist in the commits prior to the commit that contains the deletion.",
+            "title": "DeleteFile",
             "description": "Deletes a specified file from a specified branch. A commit is created on the branch that contains the revision. The file will still exist in the commits prior to the commit that contains the deletion.",
             "fields": {
                 "verbose": {
@@ -174,8 +174,8 @@
         },
         "DeleteRepository": {
             "main": "./lib/actions/DeleteRepository.js",
-            "title": "<p>Deletes a repository. If a specified repository was already deleted, a null repository ID will be returned.</p> <important> <p>Deleting a repository also deletes all associated objects and metadata. After a repository is deleted, all future push calls to the deleted repository will fail.</p> </important>",
-            "description": "<p>Deletes a repository. If a specified repository was already deleted, a null repository ID will be returned.</p> <important> <p>Deleting a repository also deletes all associated objects and metadata. After a repository is deleted, all future push calls to the deleted repository will fail.</p> </important>",
+            "title": "DeleteRepository",
+            "description": "Deletes a repository. If a specified repository was already deleted, a null\nrepository ID will be returned.\n\nDeleting a repository also deletes all associated objects and metadata. After a\nrepository is deleted, all future push calls to the deleted repository will\nfail.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -191,7 +191,7 @@
         },
         "DescribePullRequestEvents": {
             "main": "./lib/actions/DescribePullRequestEvents.js",
-            "title": "Returns information about one or more pull request events.",
+            "title": "DescribePullRequestEvents",
             "description": "Returns information about one or more pull request events.",
             "fields": {
                 "verbose": {
@@ -208,7 +208,7 @@
         },
         "GetBlob": {
             "main": "./lib/actions/GetBlob.js",
-            "title": "Returns the base-64 encoded content of an individual blob within a repository.",
+            "title": "GetBlob",
             "description": "Returns the base-64 encoded content of an individual blob within a repository.",
             "fields": {
                 "verbose": {
@@ -225,7 +225,7 @@
         },
         "GetBranch": {
             "main": "./lib/actions/GetBranch.js",
-            "title": "Returns information about a repository branch, including its name and the last commit ID.",
+            "title": "GetBranch",
             "description": "Returns information about a repository branch, including its name and the last commit ID.",
             "fields": {
                 "verbose": {
@@ -242,7 +242,7 @@
         },
         "GetComment": {
             "main": "./lib/actions/GetComment.js",
-            "title": "Returns the content of a comment made on a change, file, or commit in a repository.",
+            "title": "GetComment",
             "description": "Returns the content of a comment made on a change, file, or commit in a repository.",
             "fields": {
                 "verbose": {
@@ -259,7 +259,7 @@
         },
         "GetCommentsForComparedCommit": {
             "main": "./lib/actions/GetCommentsForComparedCommit.js",
-            "title": "Returns information about comments made on the comparison between two commits.",
+            "title": "GetCommentsForComparedCommit",
             "description": "Returns information about comments made on the comparison between two commits.",
             "fields": {
                 "verbose": {
@@ -276,7 +276,7 @@
         },
         "GetCommentsForPullRequest": {
             "main": "./lib/actions/GetCommentsForPullRequest.js",
-            "title": "Returns comments made on a pull request.",
+            "title": "GetCommentsForPullRequest",
             "description": "Returns comments made on a pull request.",
             "fields": {
                 "verbose": {
@@ -293,7 +293,7 @@
         },
         "GetCommit": {
             "main": "./lib/actions/GetCommit.js",
-            "title": "Returns information about a commit, including commit message and committer information.",
+            "title": "GetCommit",
             "description": "Returns information about a commit, including commit message and committer information.",
             "fields": {
                 "verbose": {
@@ -310,7 +310,7 @@
         },
         "GetDifferences": {
             "main": "./lib/actions/GetDifferences.js",
-            "title": "Returns information about the differences in a valid commit specifier (such as a branch, tag, HEAD, commit ID or other fully qualified reference). Results can be limited to a specified path.",
+            "title": "GetDifferences",
             "description": "Returns information about the differences in a valid commit specifier (such as a branch, tag, HEAD, commit ID or other fully qualified reference). Results can be limited to a specified path.",
             "fields": {
                 "verbose": {
@@ -327,7 +327,7 @@
         },
         "GetFile": {
             "main": "./lib/actions/GetFile.js",
-            "title": "Returns the base-64 encoded contents of a specified file and its metadata.",
+            "title": "GetFile",
             "description": "Returns the base-64 encoded contents of a specified file and its metadata.",
             "fields": {
                 "verbose": {
@@ -344,7 +344,7 @@
         },
         "GetFolder": {
             "main": "./lib/actions/GetFolder.js",
-            "title": "Returns the contents of a specified folder in a repository.",
+            "title": "GetFolder",
             "description": "Returns the contents of a specified folder in a repository.",
             "fields": {
                 "verbose": {
@@ -361,7 +361,7 @@
         },
         "GetMergeConflicts": {
             "main": "./lib/actions/GetMergeConflicts.js",
-            "title": "Returns information about merge conflicts between the before and after commit IDs for a pull request in a repository.",
+            "title": "GetMergeConflicts",
             "description": "Returns information about merge conflicts between the before and after commit IDs for a pull request in a repository.",
             "fields": {
                 "verbose": {
@@ -378,7 +378,7 @@
         },
         "GetPullRequest": {
             "main": "./lib/actions/GetPullRequest.js",
-            "title": "Gets information about a pull request in a specified repository.",
+            "title": "GetPullRequest",
             "description": "Gets information about a pull request in a specified repository.",
             "fields": {
                 "verbose": {
@@ -395,8 +395,8 @@
         },
         "GetRepository": {
             "main": "./lib/actions/GetRepository.js",
-            "title": "<p>Returns information about a repository.</p> <note> <p>The description field for a repository accepts all HTML characters and all valid Unicode characters. Applications that do not HTML-encode the description and display it in a web page could expose users to potentially malicious code. Make sure that you HTML-encode the description field in any application that uses this API to display the repository description on a web page.</p> </note>",
-            "description": "<p>Returns information about a repository.</p> <note> <p>The description field for a repository accepts all HTML characters and all valid Unicode characters. Applications that do not HTML-encode the description and display it in a web page could expose users to potentially malicious code. Make sure that you HTML-encode the description field in any application that uses this API to display the repository description on a web page.</p> </note>",
+            "title": "GetRepository",
+            "description": "Returns information about a repository.\n\nThe description field for a repository accepts all HTML characters and all valid\nUnicode characters. Applications that do not HTML-encode the description and\ndisplay it in a web page could expose users to potentially malicious code. Make\nsure that you HTML-encode the description field in any application that uses\nthis API to display the repository description on a web page.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -412,7 +412,7 @@
         },
         "GetRepositoryTriggers": {
             "main": "./lib/actions/GetRepositoryTriggers.js",
-            "title": "Gets information about triggers configured for a repository.",
+            "title": "GetRepositoryTriggers",
             "description": "Gets information about triggers configured for a repository.",
             "fields": {
                 "verbose": {
@@ -429,7 +429,7 @@
         },
         "ListBranches": {
             "main": "./lib/actions/ListBranches.js",
-            "title": "Gets information about one or more branches in a repository.",
+            "title": "ListBranches",
             "description": "Gets information about one or more branches in a repository.",
             "fields": {
                 "verbose": {
@@ -446,7 +446,7 @@
         },
         "ListPullRequests": {
             "main": "./lib/actions/ListPullRequests.js",
-            "title": "Returns a list of pull requests for a specified repository. The return list can be refined by pull request status or pull request author ARN.",
+            "title": "ListPullRequests",
             "description": "Returns a list of pull requests for a specified repository. The return list can be refined by pull request status or pull request author ARN.",
             "fields": {
                 "verbose": {
@@ -463,7 +463,7 @@
         },
         "ListRepositories": {
             "main": "./lib/actions/ListRepositories.js",
-            "title": "Gets information about one or more repositories.",
+            "title": "ListRepositories",
             "description": "Gets information about one or more repositories.",
             "fields": {
                 "verbose": {
@@ -480,7 +480,7 @@
         },
         "MergePullRequestByFastForward": {
             "main": "./lib/actions/MergePullRequestByFastForward.js",
-            "title": "Closes a pull request and attempts to merge the source commit of a pull request into the specified destination branch for that pull request at the specified commit using the fast-forward merge option.",
+            "title": "MergePullRequestByFastForward",
             "description": "Closes a pull request and attempts to merge the source commit of a pull request into the specified destination branch for that pull request at the specified commit using the fast-forward merge option.",
             "fields": {
                 "verbose": {
@@ -497,7 +497,7 @@
         },
         "PostCommentForComparedCommit": {
             "main": "./lib/actions/PostCommentForComparedCommit.js",
-            "title": "Posts a comment on the comparison between two commits.",
+            "title": "PostCommentForComparedCommit",
             "description": "Posts a comment on the comparison between two commits.",
             "fields": {
                 "verbose": {
@@ -514,7 +514,7 @@
         },
         "PostCommentForPullRequest": {
             "main": "./lib/actions/PostCommentForPullRequest.js",
-            "title": "Posts a comment on a pull request.",
+            "title": "PostCommentForPullRequest",
             "description": "Posts a comment on a pull request.",
             "fields": {
                 "verbose": {
@@ -531,7 +531,7 @@
         },
         "PostCommentReply": {
             "main": "./lib/actions/PostCommentReply.js",
-            "title": "Posts a comment in reply to an existing comment on a comparison between commits or a pull request.",
+            "title": "PostCommentReply",
             "description": "Posts a comment in reply to an existing comment on a comparison between commits or a pull request.",
             "fields": {
                 "verbose": {
@@ -548,7 +548,7 @@
         },
         "PutFile": {
             "main": "./lib/actions/PutFile.js",
-            "title": "Adds or updates a file in a branch in an AWS CodeCommit repository, and generates a commit for the addition in the specified branch.",
+            "title": "PutFile",
             "description": "Adds or updates a file in a branch in an AWS CodeCommit repository, and generates a commit for the addition in the specified branch.",
             "fields": {
                 "verbose": {
@@ -565,7 +565,7 @@
         },
         "PutRepositoryTriggers": {
             "main": "./lib/actions/PutRepositoryTriggers.js",
-            "title": "Replaces all triggers for a repository. This can be used to create or delete triggers.",
+            "title": "PutRepositoryTriggers",
             "description": "Replaces all triggers for a repository. This can be used to create or delete triggers.",
             "fields": {
                 "verbose": {
@@ -582,7 +582,7 @@
         },
         "TestRepositoryTriggers": {
             "main": "./lib/actions/TestRepositoryTriggers.js",
-            "title": "Tests the functionality of repository triggers by sending information to the trigger target. If real data is available in the repository, the test will send data from the last commit. If no data is available, sample data will be generated.",
+            "title": "TestRepositoryTriggers",
             "description": "Tests the functionality of repository triggers by sending information to the trigger target. If real data is available in the repository, the test will send data from the last commit. If no data is available, sample data will be generated.",
             "fields": {
                 "verbose": {
@@ -599,7 +599,7 @@
         },
         "UpdateComment": {
             "main": "./lib/actions/UpdateComment.js",
-            "title": "Replaces the contents of a comment.",
+            "title": "UpdateComment",
             "description": "Replaces the contents of a comment.",
             "fields": {
                 "verbose": {
@@ -616,8 +616,8 @@
         },
         "UpdateDefaultBranch": {
             "main": "./lib/actions/UpdateDefaultBranch.js",
-            "title": "<p>Sets or changes the default branch name for the specified repository.</p> <note> <p>If you use this operation to change the default branch name to the current default branch name, a success message is returned even though the default branch did not change.</p> </note>",
-            "description": "<p>Sets or changes the default branch name for the specified repository.</p> <note> <p>If you use this operation to change the default branch name to the current default branch name, a success message is returned even though the default branch did not change.</p> </note>",
+            "title": "UpdateDefaultBranch",
+            "description": "Sets or changes the default branch name for the specified repository.\n\nIf you use this operation to change the default branch name to the current\ndefault branch name, a success message is returned even though the default\nbranch did not change.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -633,7 +633,7 @@
         },
         "UpdatePullRequestDescription": {
             "main": "./lib/actions/UpdatePullRequestDescription.js",
-            "title": "Replaces the contents of the description of a pull request.",
+            "title": "UpdatePullRequestDescription",
             "description": "Replaces the contents of the description of a pull request.",
             "fields": {
                 "verbose": {
@@ -650,7 +650,7 @@
         },
         "UpdatePullRequestStatus": {
             "main": "./lib/actions/UpdatePullRequestStatus.js",
-            "title": "Updates the status of a pull request. ",
+            "title": "UpdatePullRequestStatus",
             "description": "Updates the status of a pull request. ",
             "fields": {
                 "verbose": {
@@ -667,7 +667,7 @@
         },
         "UpdatePullRequestTitle": {
             "main": "./lib/actions/UpdatePullRequestTitle.js",
-            "title": "Replaces the title of a pull request.",
+            "title": "UpdatePullRequestTitle",
             "description": "Replaces the title of a pull request.",
             "fields": {
                 "verbose": {
@@ -684,8 +684,8 @@
         },
         "UpdateRepositoryDescription": {
             "main": "./lib/actions/UpdateRepositoryDescription.js",
-            "title": "<p>Sets or changes the comment or description for a repository.</p> <note> <p>The description field for a repository accepts all HTML characters and all valid Unicode characters. Applications that do not HTML-encode the description and display it in a web page could expose users to potentially malicious code. Make sure that you HTML-encode the description field in any application that uses this API to display the repository description on a web page.</p> </note>",
-            "description": "<p>Sets or changes the comment or description for a repository.</p> <note> <p>The description field for a repository accepts all HTML characters and all valid Unicode characters. Applications that do not HTML-encode the description and display it in a web page could expose users to potentially malicious code. Make sure that you HTML-encode the description field in any application that uses this API to display the repository description on a web page.</p> </note>",
+            "title": "UpdateRepositoryDescription",
+            "description": "Sets or changes the comment or description for a repository.\n\nThe description field for a repository accepts all HTML characters and all valid\nUnicode characters. Applications that do not HTML-encode the description and\ndisplay it in a web page could expose users to potentially malicious code. Make\nsure that you HTML-encode the description field in any application that uses\nthis API to display the repository description on a web page.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -701,7 +701,7 @@
         },
         "UpdateRepositoryName": {
             "main": "./lib/actions/UpdateRepositoryName.js",
-            "title": "Renames a repository. The repository name must be unique across the calling AWS account. In addition, repository names are limited to 100 alphanumeric, dash, and underscore characters, and cannot include certain characters. The suffix \".git\" is prohibited. For a full description of the limits on repository names, see <a href=\"http://docs.aws.amazon.com/codecommit/latest/userguide/limits.html\">Limits</a> in the AWS CodeCommit User Guide.",
+            "title": "UpdateRepositoryName",
             "description": "Renames a repository. The repository name must be unique across the calling AWS account. In addition, repository names are limited to 100 alphanumeric, dash, and underscore characters, and cannot include certain characters. The suffix \".git\" is prohibited. For a full description of the limits on repository names, see <a href=\"http://docs.aws.amazon.com/codecommit/latest/userguide/limits.html\">Limits</a> in the AWS CodeCommit User Guide.",
             "fields": {
                 "verbose": {
